@@ -9,5 +9,11 @@
         </div>
     </div>
     @endcan
+    
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-8 col-lg-6">
+            <a href="{{ route('message.create') }}" class="btn btn-primary btn-lg w-100">Contact</a>
+        </div>
+    </div>
 </div>
 @endsection
