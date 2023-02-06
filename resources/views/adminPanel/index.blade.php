@@ -2,6 +2,13 @@
 
 @section('content')
 <div class="container">
+    
+    <div class="row mb-3">
+        <div class="col-12">
+            <a href="{{ route('home') }}"><b>{{ __('Go back') }}</b></a>
+        </div>
+    </div>
+    
     <div class="row justify-content-center mb-5">
         <div class="col-md-8">
             <div class="card">

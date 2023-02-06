@@ -1,7 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container mt-3">
+<div class="container">
+    <div class="row mb-3">
+        <div class="col-12">
+            <a href="{{ route('home') }}"><b>{{ __('Go back') }}</b></a>
+        </div>
+    </div>
+    
     <div class="row justify-content-center mb-2">
         <div class="col-md-10 col-lg-6">
             <h1 class="text-primary">New message</h1>

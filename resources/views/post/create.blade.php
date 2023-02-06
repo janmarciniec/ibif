@@ -2,8 +2,11 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-2 offset-10 col-md-1 offset-md-11">
+    <div class="row mb-3">
+        <div class="col-2">
+            <a href="{{ route('post.index', app()->getLocale()) }}"><b>{{ __('Go back') }}</b></a>
+        </div>
+        <div class="col-2 offset-8 col-md-1 offset-md-9">
             <a id="navbarDropdown" class="dropdown-toggle btn btn-primary" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                 @if(app()->getLocale() == 'en')
                     <span class="text-white">EN</span>
