@@ -37,4 +37,18 @@ class PostController extends Controller
 
         return redirect()->route('post.index')->with($notification);
     }
+    
+    public function destroy(\App\Models\Post $post)
+    {
+        $this->authorize('delete', [Post::class]);
+        
+        $post->delete();
+        
+        $notification = array(
+                    'message' => 'The post has been deleted.',
+                    'alert-type' => 'success'
+                );
+
+        return redirect()->route('adminPanel.index')->with($notification);
+    }
 }

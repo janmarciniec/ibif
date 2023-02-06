@@ -8,6 +8,8 @@ class AdminPanelController extends Controller
     {
         $this->authorize('view', [AdminPanel::class]);
         
-        return view('adminPanel.index');
+        $posts = \App\Models\Post::all();
+        
+        return view('adminPanel.index', compact('posts'));
     }
 }

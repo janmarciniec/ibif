@@ -25,5 +25,6 @@ Route::get('/post', [App\Http\Controllers\PostController::class, 'index'])->name
 Route::get('/post/create', [App\Http\Controllers\PostController::class, 'create'])->name('post.create')->middleware(['auth','verified']);
 Route::post('/post', [App\Http\Controllers\PostController::class, 'store'])->name('post.store');
 Route::get('/adminPanel', [App\Http\Controllers\AdminPanelController::class, 'index'])->name('adminPanel.index')->middleware(['auth','verified']);
+Route::delete('/post/{post}', [App\Http\Controllers\PostController::class, 'destroy'])->name('post.destroy');
 Route::get('/message/create', [App\Http\Controllers\MessageController::class, 'create'])->name('message.create')->middleware(['auth','verified']);
 Route::post('/message', [App\Http\Controllers\MessageController::class, 'store'])->name('message.store');
