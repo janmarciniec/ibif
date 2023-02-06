@@ -12,7 +12,7 @@
     
     <div class="row justify-content-center mb-3">
         <div class="col-md-8 col-lg-6">
-            <a href="{{ route('post.index') }}" class="btn btn-primary btn-lg w-100">User panel</a>
+            <a href="{{ route('post.index', app()->getLocale()) }}" class="btn btn-primary btn-lg w-100">User panel</a>
         </div>
     </div>
 

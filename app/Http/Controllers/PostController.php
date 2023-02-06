@@ -22,20 +22,20 @@ class PostController extends Controller
         return view('post.create');
     }
     
-    public function store(Request $request) {
+    public function store(Request $request, String $lang) {
         $data = $request->validate([
             'title' => ['required', 'string', 'max:255'],
             'content' => ['required'],
         ]);
         
         \App\Models\Post::create($data);
-        
+
         $notification = array(
-                    'message' => 'Post created',
+                    'message' => $lang=="en"?'Post created':"Post został utworzony",
                     'alert-type' => 'success'
                 );
 
-        return redirect()->route('post.index')->with($notification);
+        return redirect()->route('post.index', $lang)->with($notification);
     }
     
     public function destroy(\App\Models\Post $post)
